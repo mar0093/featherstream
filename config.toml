@@ -1,0 +1,4 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'Feather Stream'
+theme = "hugo-theme-learn"
