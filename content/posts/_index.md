@@ -3,7 +3,7 @@ title: "My First Post"
 date: 2021-08-21
 ---
 
-# My first post
+
 
 ```
 git init
