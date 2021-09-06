@@ -2,7 +2,7 @@
 title: "My Second Post"
 date: 2021-09-06
 ---
-# Git
+# Github
 
 ```
 git init
