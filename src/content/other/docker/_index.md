@@ -24,21 +24,21 @@ Navigate to the following webpage to start the Download
 
 [https://docs.docker.com/desktop/windows/install/](https://docs.docker.com/desktop/windows/install/)
 
-[Docker Button](/images/other/docker/docker-button.png)
+![Docker Button](/images/other/docker/docker-button.png?classes=border,shadow "button")
 
 Once you have downloaded the installer and click the "Ok" button you should see docker unpacking itself.
 
-[Docker Download](/images/other/docker/docker-download.png)
+![Docker Download](/images/other/docker/docker-download.png)
 
 If the download was successful you should see the "Successful download window." That would inform you to "Close and restart".
 
-[Docker Complete](/images/other/docker/docker-complete.png)
+![Docker Complete](/images/other/docker/docker-complete.png)
 
 #### Step 2. Enabling Virtualization
 
 Once you have installed Docker and done a restart you may find that since you are on Windows you will hit an error due to something called "Virtualization".
 
-[Docker Error](/images/other/docker/docker-Error.png)
+![Docker Error](/images/other/docker/docker-error.png)
 
 To fix this you will need to navigate to Windows Features.
 
@@ -48,17 +48,20 @@ To fix this you will need to navigate to Windows Features.
 - ensure that "Virtual Machine Platform" and "Windows Subsystem for Linux"
 - Ensure that Hyper-V is installed and on.
   - If it is not installed you and read about how to install Hyper-V [here.](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v)
+  {{% notice info %}}
+  Hyper-V is required if you want Windows volume tro be actively watched by Docker. WSL2 currently is bugged for this feature as of ```Docker-Desktop 4.0.0```
+  {{% /notice %}}
 - Ensure that Virtualization is enabled
 
 If Virtualization is enabled you should be able to check by navigating to the performance tab of Task manager.
 
-[Docker Error](/images/other/docker/task-manager.png)
+![Docker Error](/images/other/docker/task-manager.png)
 
 #### Step 3. Setup Linux Kernel
 
 If you are setting up a wsl2 linux kernel on you machine for the first time you will see this error upon restart.
 
-[Docker wsl2](/images/other/docker/docker-wsl2.png)
+![Docker wsl2](/images/other/docker/docker-wsl2.png)
 
 To enable the linux kernel or download one because you haven't previously you can follow this [guide.](https://docs.microsoft.com/en-us/windows/wsl/install-win10#step-4---download-the-linux-kernel-update-package)
 
@@ -127,6 +130,6 @@ We now want to see the site in the browser. We need to start Hugo's built-in web
 
 ```
 # Ensure we are looking at the directory containing the config file.
-cd featherstream/
+cd featherstream/src
 hugo server --bind 0.0.0.0 -D
 ```
