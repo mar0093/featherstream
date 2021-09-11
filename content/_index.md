@@ -2,7 +2,7 @@
 title: "Home"
 date: 2021-09-06
 ---
-# Github
+# Welcome
 
 ```
 git init
