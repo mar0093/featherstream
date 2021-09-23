@@ -4,21 +4,19 @@ date: 2021-09-06
 ---
 # Welcome
 
-```
-git init
-git remote add origin https://github.com/mar0093/featherstream.git
+Here I capture work undertaken to build featherstream. Below is my TODO list until I find a more suitable place to put this.
 
-git add .\themes\
-$ git commit -m 'add source hugo-theme-learn'
-$ git push origin master
+### TO DO
 
-write to do list
-
-set up new last pass
-
-fix sourcetree
-
-find where to host python scripts.
-
-find where to host database.
-```
+| Task | Status | Added | Comments |
+|:---:|:---:|:---:|:---|
+|~~write to do list~~ | Ongoing | 2021-09-06 | - |
+|~~set up new last pass~~ | Complete | 2021-09-06 | - |
+|~~fix sourcetree~~ | Complete | 2021-09-06 | - |
+| find where to host python scripts. | Noted | 2021-09-06 | likely to be pythonanywhere |
+| setup git connectivity with pythonanywhere | Noted | 2021-09-23 | read a paper that this is possible |
+|find where to host database| Noted | 2021-09-06 | likely to be mysql within pythonanywhere |
+| Sign up to IG for demo | Ongoing | 2021-09-23 | - |
+| Add python dev environment to docker | Noted | 2021-09-23 | - |
+| Test VSCode | Noted | 2021-09-23 | - |
+| Investigate Twelve Data | Noted | 2021-09-23 |  Doesn't include asx |
