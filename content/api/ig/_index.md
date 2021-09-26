@@ -72,4 +72,38 @@ class config(object):
     acc_type = "DEMO"
     acc_number = "your_account_number"
 ```
-At this point I don't believe demo accounts work. But we will have to keep trying.
+
+{{% notice info %}}
+IG Demo account works 24 hours after setup. It make take time to be validated on the end ig
+{{% /notice %}}
+
+### Creating Hello_World! Script
+
+To test the configuration file run the following script.
+
+```py
+from trading_ig.rest import IGService
+from trading_ig.config import config
+
+# Create session
+ig_service = IGService(config.username, config.password, config.api_key, config.acc_type)
+ig_service.create_session()
+
+
+# Searching for a market
+market_search = ig_service.search_markets("asx")
+print(market_search)
+
+# Get market information
+market = ig_service.fetch_market_by_epic('AA.D.ASX.CASH.IP')
+print(market)
+```
+
+The script will *import* the REST API for IG & and the configuration file written in the section above.
+
+It will then do 3 things
+1. Create a session.
+2. Search for a market
+3. Gather market information
+
+If you want to read further as to how to use the python wrapper you read read the docs [here.](https://trading-ig.readthedocs.io/en/latest/)
