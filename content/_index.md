@@ -16,7 +16,7 @@ Here I capture work undertaken to build featherstream. Below is my TODO list unt
 | find where to host python scripts. | Noted | 2021-09-06 | likely to be pythonanywhere |
 | setup git connectivity with pythonanywhere | Noted | 2021-09-23 | read a paper that this is possible |
 |find where to host database| Noted | 2021-09-06 | likely to be mysql within pythonanywhere |
-| Sign up to IG for demo | Ongoing | 2021-09-23 | - |
+| ~~Sign up to IG for demo~~ | Complete | 2021-09-23 | - |
 | Add python dev environment to docker | Noted | 2021-09-23 | - |
 | Test VSCode | Noted | 2021-09-23 | - |
 | Investigate Twelve Data | Noted | 2021-09-23 |  Doesn't include asx |
