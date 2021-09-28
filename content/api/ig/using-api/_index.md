@@ -5,6 +5,8 @@ date: 2021-09-27
 
 Here we disclose how to gather historical data, pricing data & how to make trades. The examples below are executed with a training account.
 
+Using the [**API Companion**](https://labs.ig.com/sample-apps/api-companion/index.html) also allows us to test a lot of scripts we see here below.
+
 ---
 
 ### Historical Data
@@ -122,22 +124,22 @@ DateTime
 
 
 ---
-### Submitting A Trade
+### Opening A Position
 
 Here we will demonstrate how to conduct a trade using the `trading-ig` library. For this we will be using our demo account.
 
 The snippet of code below opens a position:
 
 ```py
-trade = ig_service.create_open_position(
-    epic='AB.D.AXEAU.CASH.IP',
+open_trade = ig_service.create_open_position(
+    epic='AA.D.CBA.CASH.IP',
     expiry='-',
     direction='BUY',
-    size=100,
+    size='100',
     guaranteed_stop='false',
     order_type='MARKET',
     currency_code='AUD',
-    force_open='true',
+    force_open='false',
     level=None,
     limit_distance=None,
     limit_level=None,
@@ -154,7 +156,50 @@ print(trade)
  ![order companion](/images/api/ig/using-ig/order-companion.png?classes=border,shadow "start now")
 
  ```txt
- {'date': '2021-09-27T07:58:53.637', 'status': None, 'reason': 'MARKET_CLOSED_WITH_EDITS', 'dealStatus': 'REJECTED', 'epic': 'AB.D.AXEAU.CASH.IP', 'expiry': None, 'dealReference': 'CAHYUTYLJWNTZDZ', 'dealId': 'DIAAAAGK3Z9HABB', 'affectedDeals': [], 'level': None, 'size': None, 'direction': 'BUY', 'stopLevel': None, 'limitLevel': None, 'stopDistance': None, 'limitDistance': None, 'guaranteedStop': False, 'trailingStop': False, 'profit': None, 'profitCurrency': None}
+{'date': '2021-09-28T02:41:22.398', 'status': 'OPEN', 'reason': 'SUCCESS', 'dealStatus': 'ACCEPTED', 'epic': 'AA.D.CBA.CASH.IP', 'expiry': '-', 'dealReference': 'PBPKRFVDW5STZDZ', 'dealId': 'DIAAAAGLAR9A5AQ', 'affectedDeals': [{'dealId': 'DIAAAAGLAR9A5AQ', 'status': 'OPENED'}], 'level': 105.8, 'size': 100.0, 'direction': 'BUY', 'stopLevel': None, 'limitLevel': None, 'stopDistance': None, 'limitDistance': None, 'guaranteedStop': False, 'trailingStop': False, 'profit': None, 'profitCurrency': None}
  ```
 
- This will have to be tested during the day.
+We can buy CBA shares under a CFD account. It also allows us to buy 500 shares, which is worth ~$50,000 under a CFD account. need to check if we can get a demo share trading account and if the same rules apply.
+
+We also note that under a CFD account certain shares cannot be purchased. An example of this is Marcher Material (AXE) Ltd. We know this by the `specialInfo` information returned.
+
+```py
+#Get info
+market = ig_service.fetch_market_by_epic('AB.D.AXEAU.CASH.IP')
+print("Special Info: %s" % market.instrument.specialInfo)
+```
+
+which the returned information exclaims:
+
+```
+Special Info: ['Non-leveraged only', 'Unborrowable', 'DEFAULT KNOCK OUT LEVEL DISTANCE', 'MAX KNOCK OUT LEVEL DISTANCE']
+```
+Which denotes that we cannot we cannot leverage this stock with a CFD account.
+
+---
+
+### Closing a position
+
+To close a position pass a command similar to the following.
+
+```py
+close_trade = ig_service.close_open_position(
+    deal_id=deal_id,
+    direction='SELL',
+    epic=None,
+    expiry='-',
+    level=None,
+    order_type='MARKET',
+    quote_id=None,
+    size='100'
+      )
+```
+
+Note that whilst an epic is a parameter that is available, we do not use it to close our position with the same epic.
+
+#### Costs
+
+The cost for trading shares id **$5 or 0.05%** (whichever is higher). For example, we bought
+100 shares @ 105.8 = $10,580.00. We were charged $10.58. for commission. So that means we were charged 0.001% on the demo account for the purchase. We were then charged the same amount for the sale. So all up, the transaction cost 0.002%. This is lower than the expected change in price.
+
+We also have been told that Buying and selling US, UK, Ireland & Germany shares are free*. As long as foreign exchange is [automated.](https://www.ig.com/au/share-trading/charges) this is yet to be tested.

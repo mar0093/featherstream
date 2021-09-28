@@ -74,7 +74,7 @@ class config(object):
 ```
 
 {{% notice info %}}
-IG Demo account works 24 hours after setup. It make take time to be validated on the end ig
+IG Demo account works 24 hours after setup. It make take time to be validated on the end of IG
 {{% /notice %}}
 
 ### Creating Hello_World! Script

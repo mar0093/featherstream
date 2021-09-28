@@ -17,6 +17,7 @@ Here I capture work undertaken to build featherstream. Below is my TODO list unt
 | setup git connectivity with pythonanywhere | Noted | 2021-09-23 | read a paper that this is possible |
 |find where to host database| Noted | 2021-09-06 | likely to be mysql within pythonanywhere |
 | ~~Sign up to IG for demo~~ | Complete | 2021-09-23 | - |
-| Add python dev environment to docker | Noted | 2021-09-23 | - |
+| Add python dev environment to docker | Noted | 2021-09-23 | [Read quickstart guide](https://www.digitalocean.com/community/tutorials/how-to-build-and-deploy-a-flask-application-using-docker-on-ubuntu-18-04) |
 | Test VSCode | Noted | 2021-09-23 | - |
-| Investigate Twelve Data | Noted | 2021-09-23 |  Doesn't include asx |
+| ~~Investigate Twelve Data~~ | Noted | 2021-09-23 |  Doesn't include asx |
+| Trial Demo orders during the day | Ongoing | 2021-09-27 | able to purchase only when market open. Only certain shares can be bought via CFD account. |
