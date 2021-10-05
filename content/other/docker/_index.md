@@ -1,6 +1,7 @@
 ---
 title: "Setting Up Docker"
 date: 2021-09-08
+weight: 10
 ---
 
 For this project we use Docker for building containerized applications. It allows for us to bulid applications the can be easily shared across multiple platforms. It also allows us to spin up development environments with preconfigured settings we have defined for containers.
