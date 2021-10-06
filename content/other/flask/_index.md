@@ -254,6 +254,28 @@ docker run -d -p 8080:80 \
         -v $PWD:/app ${app}
 ```
 
+Run your new `start.sh` File
+
+```sh
+bash start.sh
+```
+
 Now when you run in your url `localhost:8080`  you should see a hello world page like the following.
 
 ![New-Repo](/images/other/flask/hello-world.png)
+
+I have also created a script that restarts the server.
+
+```sh
+#!/bin/bash
+docker stop leafriverapp
+docker start leafriverapp
+```
+
+Which can be run with the following command
+
+```txt
+bash rerun-leafriverapp.sh
+```
+
+Upon restrating the server with this command, all changes made to the code base will be applied. This script should be run before any commit is made to the repository.
