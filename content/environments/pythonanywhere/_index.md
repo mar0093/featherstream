@@ -104,18 +104,27 @@ if path not in sys.path:
 from main import app as application  # noqa
 ```
 
+We now see that PythonAnywhere is looking at our application! Okay so now we want to automate to the post-receive hook to automatically reload the site.
 
+In our `post-receive` file we add the touch command to the file so that when the web worker notices a change to the site it is automatically reloaded.
 
+```
+#!/bin/bash
+GIT_WORK_TREE=/var/www/leafriverapp/app git checkout -f
+touch /var/www/featherstream_pythonanywhere_com_wsgi.py
+```
 
+So now when make a change and push we should see our changes in production!
 
+```
+git commit -am"testing hook to pythonanywhere production
+git push pythonanywhere"    
+```
 
-
-
-
-
-
-
+### Helpful references for the article were
 
 
 
 https://medium.com/@aadibajpai/deploying-to-pythonanywhere-via-github-6f967956e664
+
+https://blog.pythonanywhere.com/87/
