@@ -10,8 +10,8 @@ work on the leafriver repository and any container that plays host to that given
 ## Perquisites
 
  Completion of all tasks under:
-   - [*Setting Up Docker*](/other/docker/)
-   - [*Flask Development Container*](/other/flask/)
+   - [*Setting Up Docker*](/environments/docker/)
+   - [*Flask Development Container*](/environments/flask/)
 
  ---
 
@@ -21,11 +21,11 @@ Visual Studio Code is free and built on open source. Go to the download page tha
 
 For our purposes we will be downloading Visual Studio Code for Windows.
 
-![download-options](/images/other/vscode/download-options.png)
+![download-options](/images/environments/vscode/download-options.png)
 
 From your browser run the downloaded executable and follow the prompts. The default for all options are acceptable.
 
-![download-complete](/images/other/vscode/download-complete.png)
+![download-complete](/images/environments/vscode/download-complete.png)
 
 ### Step 2. VSCode's Extension To Develop Within The PowerShell
 
@@ -35,7 +35,7 @@ Press the hotkey command `CTRL + SHIFT + P` to open the command dialog. Begin to
 
 We now should open a new terminal window. Select **Terminal** from the top of the window. and **New Terminal** from the drop down menu.
 
-![Terminal](/images/other/vscode/terminal.png)
+![Terminal](/images/environments/vscode/terminal.png)
 
 We should now have our Ubuntu 20.04 Distro's terminal available.
 
@@ -43,6 +43,6 @@ We should now have our Ubuntu 20.04 Distro's terminal available.
 
 We now want to add our existing code base. Click the file Explorer button, and Open Folder.
 
-![file-explorer](/images/other/vscode/file-explorer.png)
+![file-explorer](/images/environments/vscode/file-explorer.png)
 
 Select the *show local* button and navigate to `C:\Users\james\PycharmProjects\leafriver` and add the leafriver folder.

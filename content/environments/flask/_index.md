@@ -4,11 +4,11 @@ date: 2021-09-29
 weight: 20
 ---
 
-For this project we will use flask as our web framework. Flask is native to python and is lightweight. It also allows us to use other native integration for Python. Making Flask an ideal candidate. The initial setup is written for windows powershell, but the flask application will be run on Ubuntu.
+For this project we will use flask as our web framework. Flask is native to python and is lightweight. It also allows us to use other native tools for integration with Python. Making Flask an ideal candidate. The initial setup is written for windows powershell, but the flask application will be run on Ubuntu.
 
 ## Perquisites
 
- - Completion of all tasks under our [*Setting Up Docker*](/other/docker/) article.
+ - Completion of all tasks under our [*Setting Up Docker*](/environments/docker/) article.
 
  ---
 
@@ -18,7 +18,7 @@ In order to create an environment we need a repository to store our work under. 
 
 To create this new repo select the new repo button at the top left of the home screen.
 
-![New-Repo](/images/other/flask/new-repo.png)
+![New-Repo](/images/environments/flask/new-repo.png)
 
 You will then want to name the repo. We also want to initialise it with a README.md document as this will be a new project.
 
@@ -26,7 +26,7 @@ You will then want to name the repo. We also want to initialise it with a README
 Create this as a private repo. This will be the repo that will transition into production.
 {{% /notice %}}
 
-![leafriver](/images/other/flask/leafriver.png)
+![leafriver](/images/environments/flask/leafriver.png)
 
 
 We will then create the repo by running the following commands
@@ -262,7 +262,7 @@ bash start.sh
 
 Now when you run in your url `localhost:8080`  you should see a hello world page like the following.
 
-![New-Repo](/images/other/flask/hello-world.png)
+![New-Repo](/images/environments/flask/hello-world.png)
 
 I have also created a script that restarts the server.
 
