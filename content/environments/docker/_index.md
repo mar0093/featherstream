@@ -8,7 +8,7 @@ For this project we use Docker for building containerized applications. It allow
 
 Here we denote how we go about setting up docker. The first use case it setting up a development environment for our docs page. This very docs page! So here we go!
 
-## Perquisites
+## Prerequisites
 
 
 - Sourcetree

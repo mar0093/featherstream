@@ -1,6 +1,7 @@
 ---
 title: "Initialise Database"
 date: 2021-10-22
+weight: 10
 ---
 
 Here we outline how we initialise our database `feather`

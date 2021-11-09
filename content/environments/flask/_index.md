@@ -6,7 +6,7 @@ weight: 20
 
 For this project we will use flask as our web framework. Flask is native to python and is lightweight. It also allows us to use other native tools for integration with Python. Making Flask an ideal candidate. The initial setup is written for windows powershell, but the flask application will be run on Ubuntu.
 
-## Perquisites
+## Prerequisites
 
  - Completion of all tasks under our [*Setting Up Docker*](/environments/docker/) article.
 
@@ -185,7 +185,13 @@ bash -c 'vi requirements.txt'
 add the following line to the file as the initial dependency.
 
 ```
-Flask==1.0.2
+flask==1.0.2
+Flask-SQLAlchemy==2.4.4
+Flask-WTF==0.15.1
+mysql-connector==2.2.9
+sqlalchemy==1.3.23
+protobuf==3.19.0
+flask-login
 ```
 
 ---
