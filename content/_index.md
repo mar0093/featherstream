@@ -22,3 +22,5 @@ Here I capture work undertaken to build featherstream. Below is my TODO list unt
 | Test VSCode | Ongoing | 2021-09-23 | [Guide to integrate Docker](https://www.digitalocean.com/community/tutorials/how-to-develop-a-docker-application-on-windows-using-wsl-visual-studio-code-and-docker-desktop#:~:text=How%20To%20Develop%20a%20Docker%20Application%20on%20Windows,Microservice%20to%20Redirect%20Traffic.%20...%20More%20items...%20) |
 | ~~Investigate Twelve Data~~ | Noted | 2021-09-23 |  Doesn't include asx |
 | Trial Demo orders during the day | Ongoing | 2021-09-27 | able to purchase only when market open. Only certain shares can be bought via CFD account. |
+| Create Login page | Ongoing | 2021-11-10 | - |
+| Setup migration package for db updates | Noted | 2021-11-10 | - |

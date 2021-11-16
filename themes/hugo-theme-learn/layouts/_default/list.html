@@ -1,4 +1,7 @@
 {{ partial "header.html" . }}
+{{ if or .Params.math .Site.Params.math }}
+  {{ partial "math.html" . }}
+{{ end }}
 
 {{ if eq .Kind "section" }}
 	{{ .Content }}
